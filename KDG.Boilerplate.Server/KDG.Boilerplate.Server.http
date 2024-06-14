@@ -1,0 +1,6 @@
+@KDG.Boilerplate.Server_HostAddress = http://localhost:5260
+
+GET {{KDG.Boilerplate.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
