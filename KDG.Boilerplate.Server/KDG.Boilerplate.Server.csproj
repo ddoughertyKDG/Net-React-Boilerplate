@@ -25,4 +25,9 @@
     </ProjectReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="KDG-Net-Migrations" Version="0.0.1" />
+    <PackageReference Include="KDG-Net-Database" Version="0.0.1" />
+  </ItemGroup>
+
 </Project>
