@@ -22,3 +22,14 @@ In order to extract the most value from this boilerplate, it is important to kee
 # Contributing
 
 Pull requests are welcome and very much appreciated!
+
+## Testing changes locally
+1. Add the path to your local package build via .csproj
+```
+<PropertyGroup>
+    <RestoreSources>$(RestoreSources);https://api.nuget.org/v3/index.json;..\..\path-to-your-builds</RestoreSources>
+</PropertyGroup>
+```
+2. Clear nuget caches with `dotnet nuget locals all --clear`
+3. Restore with `dotnet restore`
+> you might add `--no-cache` for good measure
