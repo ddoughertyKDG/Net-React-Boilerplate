@@ -29,6 +29,7 @@
     <PackageReference Include="KDG-Net-Migrations" Version="0.0.1" />
     <PackageReference Include="KDG-Net-Database" Version="0.0.1" />
     <PackageReference Include="KDG-Net-Common" Version="0.0.1" />
+    <PackageReference Include="KDG-Net-Connector" Version="0.0.1" />
   </ItemGroup>
 
 </Project>
