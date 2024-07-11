@@ -2,8 +2,9 @@
 
 1. Fork or clone the repository to your machine
 2. If cloned, rename the remote with `git remote rename origin boilerplate`
-
-1. Run the app via CLI with `cd KDG.Boilerplate.Server && dotnet watch run`
+3. Ensure you have an appropriate `appsettings.development.json`, which matches the default apsettings file present in both `KDG.Boilerplate.Server` and `Migrations`.
+4. Manage and execute migrations `cd Migrations && dotnet run`
+5. Run the app via CLI with `cd KDG.Boilerplate.Server && dotnet watch run`
 > This will install all required server and client dependencies
 
 2. Your browser should open automatically, otherwise. If it doesn't, manucally navigate to https://localhost:5173

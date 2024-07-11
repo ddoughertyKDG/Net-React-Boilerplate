@@ -23,6 +23,7 @@
     <ProjectReference Include="..\kdg.boilerplate.client\kdg.boilerplate.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\Migrations\Migrations.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -36,9 +37,14 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="KDG-Net-Migrations" Version="0.0.1" />
-    <PackageReference Include="KDG-Net-Database" Version="0.0.2" />
+    <PackageReference Include="KDG-Net-Database" Version="0.0.3" />
     <PackageReference Include="KDG-Net-Common" Version="0.0.1" />
     <PackageReference Include="KDG-Net-Connector" Version="0.0.1" />
   </ItemGroup>
 
+  <Target Name="RunMigrationsApp" BeforeTargets="Build">
+    <Exec Command="dotnet run --project ..\Migrations\Migrations.csproj" />
+  </Target>
+
 </Project>
+

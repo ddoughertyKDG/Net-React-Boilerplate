@@ -5,6 +5,5 @@
 bin
 obj
 appsettings.development.json
-appsettings.production.json
 
 # Client ignore
