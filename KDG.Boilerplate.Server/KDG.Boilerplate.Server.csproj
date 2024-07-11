@@ -25,9 +25,18 @@
     </ProjectReference>
   </ItemGroup>
 
+  <PropertyGroup>
+    <RestoreSources>
+    $(RestoreSources);
+    <!-- Add your path to local nuget directories here -->
+    <!-- e.g., [...\folder-containing-nupkg-files]; without the brackets -->
+    ..\..\kdg-dotnet-libraries\KDG.DataBase\bin\Release;
+    https://api.nuget.org/v3/index.json;
+  </RestoreSources>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="KDG-Net-Migrations" Version="0.0.1" />
-    <PackageReference Include="KDG-Net-Database" Version="0.0.1" />
+    <PackageReference Include="KDG-Net-Database" Version="0.0.2" />
     <PackageReference Include="KDG-Net-Common" Version="0.0.1" />
     <PackageReference Include="KDG-Net-Connector" Version="0.0.1" />
   </ItemGroup>

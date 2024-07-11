@@ -23,13 +23,34 @@ In order to extract the most value from this boilerplate, it is important to kee
 
 Pull requests are welcome and very much appreciated!
 
-## Testing changes locally
-1. Add the path to your local package build via .csproj
+## Testing library changes locally
+
+When working on common libraries that you want to integrate into this boilerplate, you should test them prior to releasing them on nuget.
+
+1. Update your local packages version to a semantic development version for local consumption via .csproj or related
 ```
 <PropertyGroup>
-    <RestoreSources>$(RestoreSources);https://api.nuget.org/v3/index.json;..\..\path-to-your-builds</RestoreSources>
+    <Version>0.0.1-some-feature-development-1</Version>
 </PropertyGroup>
 ```
-2. Clear nuget caches with `dotnet nuget locals all --clear`
-3. Restore with `dotnet restore`
-> you might add `--no-cache` for good measure
+
+The first part of this temporary version is the version which you aspire to release. The latter half is your local iteration for testing.
+
+
+2. Add the path to your local consuming project build via .csproj or similar
+```
+  <PropertyGroup>
+    <RestoreSources>
+    $(RestoreSources);
+    <!-- Add your paths to local nuget directories here -->
+    <!-- e.g., [...\folder\some-folder-with-a-nupkg-file]; without the brackets -->
+    https://api.nuget.org/v3/index.json;
+  </RestoreSources>
+  </PropertyGroup>
+```
+
+3. Ensure the package reference inside the csproj references the most recent development build
+```
+<PackageReference Include="[your-package-name]" Version="0.0.1-some-feature-development-1" />
+```
+4. Restore with `dotnet restore`
