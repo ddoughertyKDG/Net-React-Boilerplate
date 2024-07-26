@@ -16,7 +16,7 @@ export const AppRouter = () => {
 
   const [loading,setLoading] = useState(true)
 
-  const {user,login,logout} = useAuthContext()
+  const {user,login,logout,editProfile} = useAuthContext()
 
   const defaultGateRender = <Login/>
 
@@ -72,6 +72,9 @@ export const AppRouter = () => {
                 <Row>
                   <Col>
                     <h2>Welcome</h2>
+                    <ActionButton onClick={() => editProfile()}>
+                      Edit Profile
+                    </ActionButton>
                     <ActionButton onClick={() => logout()}>
                       Logout
                     </ActionButton>

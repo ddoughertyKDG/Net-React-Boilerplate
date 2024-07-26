@@ -31,7 +31,7 @@
     $(RestoreSources);
     <!-- Add your path to local nuget directories here -->
     <!-- e.g., [...\folder-containing-nupkg-files]; without the brackets -->
-    ..\..\kdg-dotnet-libraries\KDG.DataBase\bin\Release;
+    ..\..\kdg-dotnet-libraries\KDG.DataBase\bin\Debug;
     https://api.nuget.org/v3/index.json;
   </RestoreSources>
   </PropertyGroup>
